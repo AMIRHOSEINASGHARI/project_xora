@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
+
+import Header from "@/components/shared/Header";
 
 export const metadata: Metadata = {
   title: "Xora | Sass Landing Page",
@@ -13,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="overflow-hidden">{children}</main>
+        <Header />
+        <main className="overflow-hidden container-base mt-32">{children}</main>
       </body>
     </html>
   );
