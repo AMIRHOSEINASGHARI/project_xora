@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
 import { Element, Link as LinkScroll } from "react-scroll";
 
 import Button from "@/components/ui/Button";
-import Image from "next/image";
 
 const Hero = () => {
   return (
