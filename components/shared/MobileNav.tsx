@@ -3,8 +3,15 @@ import Image from "next/image";
 import clsx from "clsx";
 
 import NavLink from "./NavLink";
+import { Dispatch, SetStateAction } from "react";
 
-const MobileNav = ({ open }: { open: boolean }) => {
+const MobileNav = ({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
     <div
       className={clsx(
@@ -12,23 +19,23 @@ const MobileNav = ({ open }: { open: boolean }) => {
         open ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
     >
-      <nav>
+      <nav className="relative z-2">
         <ul>
           <li className="nav-li">
-            <NavLink title="features" />
+            <NavLink title="features" onClick={() => setOpen(false)} />
           </li>
           <li className="nav-li">
-            <NavLink title="pricing" />
+            <NavLink title="pricing" onClick={() => setOpen(false)} />
           </li>
           <li className="nav-li">
-            <NavLink title="faq" />
+            <NavLink title="faq" onClick={() => setOpen(false)} />
           </li>
           <li className="nav-li">
-            <NavLink title="download" />
+            <NavLink title="download" onClick={() => setOpen(false)} />
           </li>
         </ul>
       </nav>
-      <div className="absolute -left-[290px] w-[968px] rotate-90">
+      <div className="absolute -left-[290px] w-[968px] rotate-90 z-1">
         <Image
           src="/images/bg-outlines.svg"
           alt="outline"
