@@ -232,7 +232,7 @@
   }
 
   .pricing-plan_even {
-    @apply even:g7 even:rounded-bl-3xl even:rounded-br-3xl even:rounded-tl-3xl even:rounded-tr-3xl even:border-s4;
+    @apply even:g7 even:rounded-bl-3xl even:rounded-3xl even:border-s4;
   }
 
   /* END of Pricing */
