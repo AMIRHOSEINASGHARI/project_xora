@@ -12,7 +12,6 @@ const Testimonials = () => {
           <p className="caption mb-5 max-md:mb-2.5">Wall of Love</p>
           <h3 className="h3 max-md:h5 text-p4">Words from our fans</h3>
         </div>
-
         <div className="testimonials_inner-after testimonials_inner-before relative -my-12 -mr-3 flex items-start max-lg:static max-md:block">
           <div className="testimonials_group-after flex-50">
             {testimonials.slice(0, halfLength).map((testimonial) => (
@@ -23,7 +22,6 @@ const Testimonials = () => {
               />
             ))}
           </div>
-
           <div className="flex-50">
             {testimonials.slice(halfLength).map((testimonial) => (
               <TestimonialItem
